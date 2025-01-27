@@ -136,7 +136,9 @@ fn main(){
 ### Compiling and Running
 #### There are two options for compiling and running:
 - Run ```cargo build```: Compiles your rust code into a new executable. It performs a similar function that ```gcc [file]``` ran in COMP211 for our C programs. Then find the executable file in your directory and type the name of the executable into your terminal to run it.
-- Run ```cargo run```: Compiles your code into an executable AND runs it. Doing this is most common to see your results faster and easier
+- Run ```cargo run```: Compiles your code into an executable AND runs it. Doing this is most common to see your results faster and easier.
+
+Once you run either of the steps above, if you see "Hello COMP423!" in the terminal, congratulations! You have created your first Rust program successfully!
 
 ### Stage and Commit Your Changes to Git
 Once you're satisfied with your code, run the following in your local VS Code terminal:
@@ -152,6 +154,7 @@ git push origin
 !!! note "Understanding Git Commands"
 
     ```git add .``` adds all directory files to the git stage. Essentially, it 'prepares' your changes to be committed. ```git commit -m "First commit"``` commits these staged changes to your version control, storing a snapshop of these files to your version control.
+
 
 
 ## Citations
