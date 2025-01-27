@@ -37,7 +37,7 @@ git init
 !!! question "What is ```git init```?"
 
     git init creates a new invisible repository in our current directy ".git" which will store your future version history to maintain version control.
-4. Create a README.txt file:
+4. Create a README.md file:
 ```
 echo "Tutorial Link: https://elijahwood2003.github.io/comp423-course-notes/tutorials/rust-setup/" > README.md
 git add README.md
@@ -48,7 +48,7 @@ git commit -m "Initial commit with README"
 2. Fill in the details as follows:
 #####
 - **Repository Name**: basic-rust-program
-- **Description**: Basic Rust program based on the tutorial in README.txt
+- **Description**: Basic Rust program based on the tutorial in README.md
 - **Visibility**: Public
 3. Click **Create Repository**.
 
