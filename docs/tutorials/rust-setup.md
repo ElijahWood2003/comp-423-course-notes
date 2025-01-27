@@ -80,7 +80,7 @@ Within ```devcontainer.json``` paste the following code:
 ```
 {
   "name": "Basic Rust Program",
-  "image": "mcr.microsoft.com/vscode/devcontainers/rust",
+  "image": "mcr.microsoft.com/vscode/devcontainers/rust:latest",
   "customizations": {
     "vscode": {
       "settings": {},
@@ -94,6 +94,11 @@ Within ```devcontainer.json``` paste the following code:
 + ```image```: The Rust dev container image you will use; in this case, the latest development environment for Rust from Microsoft.
 + ```customizations```: Adds configurations we need for the Rust dev container in VS Code. ```rust-lang.rust-analyzer``` is the extension we need for VS Code to run Rust.
 
+#
+???+ warning "WARNING"
+    Make sure your docker is opened before you move onto the next step.
+
+    If this next step still doesn't work, make sure you check spelling.
 
 ### Reopen Your Project in the Dev Container
 Now that you've added the ```devcontainer.json``` file, you're ready to reopen your project in your dev container! To do this press ```Ctrl+Shift+P``` on Windows, or ```Cmd+Shift+P``` on Mac. Then type in "Dev Containers: Reopen in Container," and select the option prompted.
@@ -131,7 +136,7 @@ fn main(){
 ### Compiling and Running
 #### There are two options for compiling and running:
 - Run ```cargo build```: Compiles your rust code into a new executable. It performs a similar function that ```gcc [file]``` ran in COMP211 for our C programs. Then find the executable file in your directory and type the name of the executable into your terminal to run it.
-- Run ```cargo run```: Compiles your code into an executable AND runs it. 
+- Run ```cargo run```: Compiles your code into an executable AND runs it. Doing this is most common to see your results faster and easier
 
 ### Stage and Commit Your Changes to Git
 Once you're satisfied with your code, run the following in your local VS Code terminal:
@@ -139,9 +144,16 @@ Once you're satisfied with your code, run the following in your local VS Code te
 git add .
 git commit -m "Added Hello COMP423 Program"
 ```
+
+You must then push your edits using the following command:
+```
+git push origin
+```
 !!! note "Understanding Git Commands"
 
     ```git add .``` adds all directory files to the git stage. Essentially, it 'prepares' your changes to be committed. ```git commit -m "First commit"``` commits these staged changes to your version control, storing a snapshop of these files to your version control.
+
+
 
 
 ## Citations
