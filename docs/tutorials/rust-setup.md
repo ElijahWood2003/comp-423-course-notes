@@ -86,7 +86,7 @@ Within ```devcontainer.json``` paste the following code:
       "settings": {},
       "extensions": ["rust-lang.rust-analyzer"]
     }
-  },
+  }
 }
 ``` 
 ######
@@ -98,21 +98,28 @@ Within ```devcontainer.json``` paste the following code:
 ### Reopen Your Project in the Dev Container
 Now that you've added the ```devcontainer.json``` file, you're ready to reopen your project in your dev container! To do this press ```Ctrl+Shift+P``` on Windows, or ```Cmd+Shift+P``` on Mac. Then type in "Dev Containers: Reopen in Container," and select the option prompted.
 
-Once your dev container finishes loading, close the current terminal and open a new terminal (Terminal > New Terminal). Ensure you are running the latest version of Rust by typing the command ```rustc --version```.
+Once your dev container finishes loading, close the current terminal and open a new terminal (Terminal > New Terminal). Ensure you are running the latest version of Rust by typing the command ```rustc --version```. It should be approximately 1.83.0.
 
 
 ## Part 3: Creating a Basic Rust Program
 ### Creating Your Program
-Within your main directory, add a new file named ```basic-program.rs```
++ Go to a new local terminal in VS Code and run the commands: 
+```
+cargo new --vcs none basic-program
+cd basic-program
+```
+######
++ ```cargo new --vcs none basic-program```: Creates a new binary project, and the ```--vcs none``` flag removes the automatic function of creating a new .git repository on your behalf. The binary project is composed of a new directory named ```basic-program``` with ```src``` in it and a new ```main.rs``` file within the ```src``` directory. It also includes a ```Cargo.toml``` file which manages the version of your binary project.
++ ```cd basic-program```: Sets our current working directory into this new repository we've created.
 !!! question "What is the ```.rs``` file extension?"
 
     ```.rs``` is the default Rust file extension. Anytime you are writing a Rust program it is important to add this to the end of the file to ensure the program knows it is writing to Rust.
 
-Paste the following code into your ```basic-program.rs```:
+Locate ```main.rs``` and replace the code in it with the following:
 ```
-// Prints "Hello, COMP423" to the terminal
+// Prints "Hello, COMP423!" to the terminal
 fn main(){
-    println!("Hello COMP423");
+    println!("Hello COMP423!");
 }
 ```
 
@@ -121,16 +128,8 @@ fn main(){
 - ```fn main()``` defines a new function called main for the program to call.
 - ```println!``` prints the string within the parentheses to the terminal.
 
-### Compiling and Running Your Program
-+ Go to a new local terminal in VS Code and run the commands: 
-```
-cargo new --vcs none
-```
-######
-+ ```cargo new --vcs none```: Creates a new binary project, and the ```--vcs none``` flag removes the automatic function of creating a new .git repository on your behalf.
-
-
-#### Two Options for Building and Running:
+### Compiling and Running
+#### There are two options for compiling and running:
 - Run ```cargo build```: Compiles your rust code into a new executable. It performs a similar function that ```gcc [file]``` ran in COMP211 for our C programs. Then find the executable file in your directory and type the name of the executable into your terminal to run it.
 - Run ```cargo run```: Compiles your code into an executable AND runs it. 
 
