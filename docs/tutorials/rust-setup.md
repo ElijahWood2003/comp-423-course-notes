@@ -154,8 +154,6 @@ git push origin
     ```git add .``` adds all directory files to the git stage. Essentially, it 'prepares' your changes to be committed. ```git commit -m "First commit"``` commits these staged changes to your version control, storing a snapshop of these files to your version control.
 
 
-
-
 ## Citations
 - [423 MkDocs Tutorial](https://comp423-25s.github.io/resources/MkDocs/tutorial/)
 - [Microsoft Dev Containers](https://hub.docker.com/r/microsoft/vscode-devcontainers)
