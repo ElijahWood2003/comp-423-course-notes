@@ -122,7 +122,7 @@ cd basic-program
 
 Locate ```main.rs``` and replace the code in it with the following:
 ```
-// Prints "Hello, COMP423!" to the terminal
+// Prints "Hello COMP423!" to the terminal
 fn main(){
     println!("Hello COMP423!");
 }
